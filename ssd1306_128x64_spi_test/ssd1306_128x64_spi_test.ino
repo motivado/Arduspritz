@@ -30,15 +30,12 @@ All text above, and the splash screen must be included in any redistribution
 Adafruit_SSD1306 display(OLED_MOSI, OLED_CLK, OLED_DC, OLED_RESET, OLED_CS);
 
 
-#if (SSD1306_LCDHEIGHT != 64)
-#error("Height incorrect, please fix Adafruit_SSD1306.h!");
-#endif
 
 void setup()   {                
   Serial.begin(9600);
 
   // by default, we'll generate the high voltage from the 3.3v line internally! (neat!)
-  display.begin(SSD1306_SWITCHCAPVCC);
+//  display.begin(SSD1331_SWITCHCAPVCC);
   // init done
  display.clearDisplay();
  display.setTextColor(WHITE);
